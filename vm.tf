@@ -7,5 +7,6 @@ resource "aws_instance" "vm" {
 
   tags = {
     Name = "${var.project}-server"
+    Stage = "prod"
   }
 }
