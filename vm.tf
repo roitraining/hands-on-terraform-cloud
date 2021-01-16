@@ -6,6 +6,6 @@ resource "aws_instance" "vm" {
   //user_data = file("install_space-invaders.sh")
 
   tags = {
-    Name = "server-${count.index}"
+    Name = "server"
   }
 }
