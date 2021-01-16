@@ -1,7 +1,12 @@
-provider "google" {
-  credentials = file("~/terraform-key.json")
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+    }
+  }
+}
 
-  project = var.project_id
+provider "aws" {
   region  = var.region
-  zone    = var.zone
 }
